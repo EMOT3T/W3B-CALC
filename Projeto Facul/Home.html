@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc.AI</title>
+    <link rel="stylesheet" href="styleshome.css">
+</head>
+<body>
+
+    <!--Div do menu-->
+    <div id="left-menu">
+        <button id="menu-button">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>        
+        <div id="submenu">
+            <ul>
+                <li><a href="materia.html"><h3>Matérias</h3></a></li>
+            </ul>
+            <a href="Ai.html">
+                <img src="https://img.freepik.com/vetores-gratis/robo-flutuante_78370-3669.jpg?t=st=1715440147~exp=1715443747~hmac=524c30d929273d561ea676636ec067c91b3ebd94b2da10891a36d3d992f6ab43&w=740" alt="AI">
+            </a>
+        </div>        
+    </div>
+
+    <!--Div da Calculadora-->
+    <div class="container">
+        <h2>Bem-Vindo a Calc-Ai</h2>
+        <div>
+            <label for="nomeMateria">Nome da Matéria:</label>
+            <input type="text" id="nomeMateria" placeholder="Matéria">
+        </div>
+
+        <table id="notasTable">
+            <tbody>
+                <tr>
+                    <td class="notaHeader"><h3>N1</h3></td>
+                    <td><input type="number" class="notaInput" id="notaN1" step="0.01" placeholder="N1"></td>
+                </tr>
+                <tr>
+                    <td class="notaHeader"><h3>AP</h3></td>
+                    <td><input type="number" class="notaInput" id="notaAP" step="0.01" placeholder="AP"></td>
+                </tr>
+                <tr>
+                    <td class="notaHeader"><h3>AI</h3></td>
+                    <td><input type="number" class="notaInput" id="notaAI" step="0.01" placeholder="AI"></td>
+                </tr>
+                <tr>
+                    <td class="notaHeader"><h3>N2</h3></td>
+                    <td><input type="number" class="notaInput" id="notaN2" step="0.01" placeholder="N2" disabled></td>
+                </tr>
+                <tr id="notaN3Row" style="display: none;">
+                    <td class="notaHeader"><h3>N3</h3></td>
+                    <td>
+                        <input type="number" class="notaInput" id="notaN3" step="0.01" placeholder="N3">
+                        <button class="iconButton" id="removeN3Button">🗑️</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div>
+            <button id="addN3Button">Adicionar N3</button>
+        </div>
+        <div id="mediaEscola">
+            <label for="mediaEscolaInput">Média da sua Escola / Universidade:</label>
+            <input type="number" id="mediaEscolaInput" step="0.01" placeholder="Média">
+        </div>
+        <div>
+            <label for="pontoExtra">Ganhou ponto extra na média?</label>
+            <input type="checkbox" id="pontoExtra" onclick="togglePontoExtra()">
+            <input type="number" id="valorPontoExtra" step="0.01" style="display: none;" placeholder="Valor do ponto extra">
+        </div>
+        <div>
+            <button onclick="calcularMedia()">Calcular média</button>
+        </div>
+        <div id="resultado"></div>
+    </div>
+
+    <script src="scripthome.js"></script>
+</body>
+</html>
