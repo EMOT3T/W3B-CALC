@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico da Matéria</title>
+    <link rel="stylesheet" href="stylesmateria.css">
+</head>
+<body>
+    <header>
+        <h1>Histórico de Matéria</h1>
+    </header>
+
+    <main id="mainContent">
+        <div id="materiaInfo">
+            <div id="materiaHeader">
+                <h2>Matéria</h2>
+                <button id="addButton">N3</button>
+            </div>
+            <table id="notasTable">
+                <tbody>
+                    <tr>
+                        <td class="notaHeader"><h3>N1</h3></td>
+                        <td><input type="number" class="notaInput" id="notaN1"></td>
+                    </tr>
+                    <tr>
+                        <td class="notaHeader"><h3>AP</h3></td>
+                        <td><input type="number" class="notaInput" id="notaAP"></td>
+                    </tr>
+                    <tr>
+                        <td class="notaHeader"><h3>AI</h3></td>
+                        <td><input type="number" class="notaInput" id="notaAI"></td>
+                    </tr>
+                    <tr>
+                        <td class="notaHeader"><h3>N2</h3></td>
+                        <td><input type="number" class="notaInput" id="notaN2" disabled></td>
+                    </tr>
+                    <tr id="notaN3Row" style="display: none;">
+                        <td class="notaHeader"><h3>N3</h3></td>
+                        <td>
+                            <input type="number" class="notaInput" id="notaN3">
+                            <button class="iconButton" id="removeN3Button">🗑️</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="mediaContainer">
+                <p>Média do Ensino: <input type="number" id="mediaEscolaInput"></p>
+            </div>
+            <button id="calcularMediaButton">Calcular Média</button>
+            <p id="mediaResult"></p>
+        </div>
+    </main>
+
+    <div id="left-menu">
+        <button id="menu-button">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+        </button>
+
+        <div id="submenu">
+            <ul>
+                <li><a href="Home.html"><h3>Home</h3></a></li>
+            </ul>
+            <a href="Ai.html">
+                <img src="https://img.freepik.com/vetores-gratis/robo-flutuante_78370-3669.jpg?t=st=1715440147~exp=1715443747~hmac=524c30d929273d561ea676636ec067c91b3ebd94b2da10891a36d3d992f6ab43&w=740" alt="AI">
+            </a>
+        </div>
+    </div>
+
+    <script src="scriptmateria.js"></script>
+</body>
+</html>
