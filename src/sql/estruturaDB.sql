@@ -36,21 +36,21 @@ CREATE TABLE Curso (
   idCurso INT AUTO_INCREMENT PRIMARY KEY,
   nomeCurso TEXT NOT NULL,
   idUniversidade INT NOT NULL,
-  quantSemestres INTEGER NOT NULL,
+  quantSemestres INT NOT NULL,
   informacoesCurso JSON NOT NULL,
   FOREIGN KEY (idUniversidade) REFERENCES Universidade(idUniversidade)
 );
 
 CREATE TABLE Semestre (
-  idSemestre INTEGER AUTO_INCREMENT PRIMARY KEY,
-  idCurso INTEGER NOT NULL,
-  semestre INTEGER NOT NULL,
+  idSemestre INT AUTO_INCREMENT PRIMARY KEY,
+  idCurso INT NOT NULL,
+  semestre INT NOT NULL,
   FOREIGN KEY (idCurso) REFERENCES Curso(idCurso)
 );
 
 CREATE TABLE Materia (
-  idMateria INTEGER AUTO_INCREMENT PRIMARY KEY,
-  idSemestre INTEGER NOT NULL,
+  idMateria INT AUTO_INCREMENT PRIMARY KEY,
+  idSemestre INT NOT NULL,
   nomeMateria TEXT NOT NULL,
   FOREIGN KEY (idSemestre) REFERENCES Semestre(idSemestre)
 );
